@@ -1,0 +1,236 @@
+/* CompanyStudents.css */
+.tasks-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.company-filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.company-search {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.company-search:focus {
+  border-color: #1c777d;
+  box-shadow: 0 0 0 3px rgba(28, 119, 125, 0.1);
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.filter-tab:hover {
+  background: #f1f5f9;
+}
+
+.filter-tab.active {
+  background: #1c777d;
+  color: white;
+  border-color: #1c777d;
+}
+
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.student-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.student-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.student-rank {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.medal {
+  font-size: 1.5rem;
+}
+
+.rank-num {
+  color: #94a3b8;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.student-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #1c777d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.student-name {
+  font-size: 1.2rem;
+  margin: 0 0 0.25rem 0;
+  color: #0f172a;
+}
+
+.student-tagline {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.student-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.meta-badge {
+  background: #f1f5f9;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.student-score-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.student-score-val {
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.score-bar-track {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.score-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.8s ease;
+}
+
+.student-stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.student-stat {
+  background: #f8fafc;
+  padding: 0.5rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.student-stat strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.student-stat span {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.student-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.skill-tag {
+  background: #e2e8f0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.skill-more {
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+
+.student-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  font-size: 0.8rem;
+  color: #475569;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: #f1f5f9;
+}
+
+.btn-add {
+  background: #1c777d;
+  color: white;
+  border-color: #1c777d;
+}
+
+.btn-add:hover {
+  background: #155b60;
+  border-color: #155b60;
+}
