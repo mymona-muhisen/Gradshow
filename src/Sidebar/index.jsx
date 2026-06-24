@@ -1,21 +1,22 @@
-//---------الملف بالكامل إضافي------
 import React, { useState } from "react";
-
 import logo from "../assets/logo.svg";
 import Home from "../assets/home-solid.svg";
+
 import { NavLink } from "react-router-dom";
+
 import {
-  CalendarHeart,
-  Hospital,
-  Stethoscope,
   UserRectangle,
+  Trophy,
+  ClipboardText,
+  Files,
+  UserCircle,
 } from "@phosphor-icons/react";
 
 const Sidebar = () => {
   const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
-
   const [profileClick, setProfileClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
   const handleProfileClick = () => setProfileClick(!profileClick);
 
   const getItemClass = ({ isActive }) =>
@@ -25,75 +26,118 @@ const Sidebar = () => {
     <div className="sidebar">
       <button
         className={`sidebar-toggle${click ? " is-open" : ""}`}
-        onClick={() => handleClick()}
+        onClick={handleClick}
       >
-        Click
+        Menu
       </button>
+
       <div className="sidebar-shell">
         <div className="sidebar-logo">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="GradShow Logo" />
         </div>
+
         <ul className={`sidebar-list${click ? " is-open" : ""}`}>
-          <NavLink onClick={() => setClick(false)} to="/" end className={getItemClass}>
+          <NavLink
+            onClick={() => setClick(false)}
+            to="/"
+            end
+            className={getItemClass}
+          >
             <img src={Home} alt="Home" />
             <span className={`sidebar-text${click ? " is-open" : ""}`}>
               Home
             </span>
           </NavLink>
+
           <NavLink
             onClick={() => setClick(false)}
-            to="/patients"
+            to="/dashboard"
             className={getItemClass}
           >
-            <UserRectangle className="sidebar-icon" size={20} weight="fill" />
+            <UserRectangle
+              className="sidebar-icon"
+              size={20}
+              weight="fill"
+            />
             <span className={`sidebar-text${click ? " is-open" : ""}`}>
-              Patients
+              Dashboard
             </span>
           </NavLink>
+
           <NavLink
             onClick={() => setClick(false)}
-            to="/calender"
+            to="/tasks"
             className={getItemClass}
           >
-            <CalendarHeart className="sidebar-icon" size={20} weight="fill" />
+            <ClipboardText
+              className="sidebar-icon"
+              size={20}
+              weight="fill"
+            />
             <span className={`sidebar-text${click ? " is-open" : ""}`}>
-              Calender
+              My Tasks
             </span>
           </NavLink>
+
           <NavLink
             onClick={() => setClick(false)}
-            to="/doctors"
+            to="/submissions"
             className={getItemClass}
           >
-            <Stethoscope className="sidebar-icon" size={20} weight="fill" />
+            <Files
+              className="sidebar-icon"
+              size={20}
+              weight="fill"
+            />
             <span className={`sidebar-text${click ? " is-open" : ""}`}>
-              Doctors
+              Submissions
             </span>
           </NavLink>
+
           <NavLink
             onClick={() => setClick(false)}
-            to="/appointments"
+            to="/scores"
             className={getItemClass}
           >
-            <Hospital className="sidebar-icon" size={20} weight="fill" />
+            <Trophy
+              className="sidebar-icon"
+              size={20}
+              weight="fill"
+            />
             <span className={`sidebar-text${click ? " is-open" : ""}`}>
-              Appointments
+              Scores
+            </span>
+          </NavLink>
+
+          <NavLink
+            onClick={() => setClick(false)}
+            to="/profile"
+            className={getItemClass}
+          >
+            <UserCircle
+              className="sidebar-icon"
+              size={20}
+              weight="fill"
+            />
+            <span className={`sidebar-text${click ? " is-open" : ""}`}>
+              Profile
             </span>
           </NavLink>
         </ul>
 
         <div className={`sidebar-profile${profileClick ? " is-open" : ""}`}>
           <img
-            onClick={() => handleProfileClick()}
+            onClick={handleProfileClick}
             src="https://picsum.photos/200"
             alt="Profile"
           />
+
           <div
             className={`sidebar-details${profileClick ? " is-open" : ""}`}
           >
             <div className="sidebar-name">
-              <h4>Jhon&nbsp;Doe</h4>
-              <a href="/#">view&nbsp;profile</a>
+              <h4>Sarah Ahmad</h4>
+              <a href="/profile">View Profile</a>
             </div>
           </div>
         </div>

@@ -4,13 +4,14 @@ import { gsap } from "gsap";
 import { useNavigate } from "react-router-dom";
 
 const images = [
-  "/img-1.jpg",
-  "/img-2.jpg",
-  "/img-3.jpg",
-  "/img-4.jpg",
-  "/img-5.jpg",
-  "/img-6.jpg",
-  "/img-7.jpg",
+  // "/img-1.jpg",
+  // "/img-2.jpg",
+  // "/img-3.jpg",
+  // "/img-4.jpg",
+  // "/img-5.jpg",
+  "/img-6.gif",
+  "/img-7.gif",
+  "/img-88.gif",
 ];
 
 export default function CursorAnimation() {
@@ -58,11 +59,13 @@ useEffect(() => {
     <>
     <section className="container" ref={containerRef}>
       <div className="text">
-        <h1>AL HASAN HOSPITAL</h1>
-        <p>We provide integrated, world-class healthcare delivered by a team of leading consultants across all specialties. From emergency care and advanced surgery to intensive care, our precise diagnostic and therapeutic services are supported by the latest medical technology. We treat you as a person first—your health is our commitment.</p>
+        <h1>GRADSHOW</h1>
+        <p>Showcase your projects, skills, and achievements.
+Connect graduates with companies through real work,
+evaluations, and portfolio-based hiring.</p>
       
-      <button  className="primary-btn" onClick={() => navigate("/patients")}>
-        Patients Dashboard  
+      <button  className="primary-btn" onClick={() => navigate("/dashboard")}>
+        EXPLORE  
       </button>
     </div>
     </section>
